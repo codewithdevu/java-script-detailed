@@ -59,7 +59,85 @@ const {name:  username, age: userAge} = user2;
 console.log(username);
 console.log(userAge);
 
+// 3. Default Values (Very Important)
+
+// Used when value is missing or undefined.
 
 
+// Array Default Values
 
+const arr4 = [10];
 
+const [a1, b2 = 50] = arr4;
+
+console.log(a1); // 10
+console.log(b2); // 50
+
+// Object Default Values
+const user3 = {
+  name: "Divyansh"
+};
+
+const { name3, age3 = 18 } = user3;
+
+console.log(age3); // 18
+
+// 4. Nested Destructuring
+
+// Used when arrays or objects are inside objects (very common in API data).
+
+// Nested Object
+const user4 = {
+  name: "Divyansh",
+  address: {
+    city: "Ajmer",
+    state: "Rajasthan"
+  }
+};
+
+const {
+  address: { city, state }
+} = user4;
+
+console.log(city);  // Ajmer
+console.log(state); // Rajasthan
+
+// Nested Array
+
+const data = [1, [2, 3]];
+
+const [a2, [b3, c3]] = data;
+
+console.log(a2); // 1
+console.log(b3); // 2
+console.log(c3); // 3
+
+// 5. Real Data Extraction (API-Style Example)
+
+// This is REAL WORLD USE (React, Backend, APIs).
+
+// Example: API Response
+const response = {
+  status: 200,
+  data: {
+    user: {
+      id: 101,
+      name2: "Divyansh",
+      skills: ["JS", "Python", "React"]
+    }
+  }
+};
+
+// Extract Only What You Need
+
+const {
+  data: {
+    user: {
+      name2,
+      skills: [firstSkill]
+    }
+  }
+} = response;
+
+console.log(name2);       // Divyansh
+console.log(firstSkill); // JS
