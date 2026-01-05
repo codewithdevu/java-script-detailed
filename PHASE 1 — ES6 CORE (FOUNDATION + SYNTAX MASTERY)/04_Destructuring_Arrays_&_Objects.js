@@ -29,6 +29,36 @@ console.log(x);
 console.log(y);
 console.log(rest);
 
+// 2. Object Destructuring
+
+// Concept
+// Object destructuring extracts values by key name, not position
+
+const user =  {
+    name: "Divyansh",
+    age: 19,
+    course: "BSC Maths"
+};
+
+const {name, age, course} = user;
+
+console.log(name);
+console.log(age);
+console.log(course);
+
+
+// Rename Variables
+
+const user2 = {
+    name: "dheeraj",
+    age: 20  
+};
+
+const {name:  username, age: userAge} = user2;
+
+console.log(username);
+console.log(userAge);
+
 
 
 
