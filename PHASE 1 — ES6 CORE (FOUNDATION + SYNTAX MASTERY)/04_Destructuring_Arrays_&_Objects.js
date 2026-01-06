@@ -8,14 +8,14 @@ const arr = [10, 20, 30];
 
 const [a, b, c] = arr;
 
-console.log(a); 
-console.log(b); 
-console.log(c); 
+console.log(a);
+console.log(b);
+console.log(c);
 
 // Skip Values
-const arr2 = [15, 25, 35 ,45 ,55];
+const arr2 = [15, 25, 35, 45, 55];
 
-const [arr1 , , , ,arr5] = arr2
+const [arr1, , , , arr5] = arr2
 
 console.log(arr1);
 console.log(arr5);
@@ -34,13 +34,13 @@ console.log(rest);
 // Concept
 // Object destructuring extracts values by key name, not position
 
-const user =  {
-    name: "Divyansh",
-    age: 19,
-    course: "BSC Maths"
+const user = {
+  name: "Divyansh",
+  age: 19,
+  course: "BSC Maths"
 };
 
-const {name, age, course} = user;
+const { name, age, course } = user;
 
 console.log(name);
 console.log(age);
@@ -50,11 +50,11 @@ console.log(course);
 // Rename Variables
 
 const user2 = {
-    name: "dheeraj",
-    age: 20  
+  name: "dheeraj",
+  age: 20
 };
 
-const {name:  username, age: userAge} = user2;
+const { name: username, age: userAge } = user2;
 
 console.log(username);
 console.log(userAge);
@@ -75,11 +75,12 @@ console.log(b2); // 50
 
 // Object Default Values
 const user3 = {
-  name: "Divyansh"
+  name3: "Divyansh"
 };
 
 const { name3, age3 = 18 } = user3;
 
+console.log(name3); // divyansh
 console.log(age3); // 18
 
 // 4. Nested Destructuring
@@ -145,9 +146,9 @@ console.log(firstSkill); // JS
 
 // 6. Destructuring in Function Parameters (Advanced but Common) 
 
-function printuser({name, age}) {
+function printuser({ name, age }) {
   console.log(name, age);
-} 
+}
 
 printuser({
   name: "Hemant",
@@ -156,11 +157,11 @@ printuser({
 
 // with default values
 
-function printuser ({name, age = 18}){
-  console.log(name,age);
+function printuser({ name, age = 18 }) {
+  console.log(name, age);
 }
- 
-printuser({ name: "rohit"})
+
+printuser({ name: "rohit" })
 
 // 7. Why Destructuring is Important
 
@@ -176,12 +177,51 @@ printuser({ name: "rohit"})
 
 // Mastery Practice (Must Do)
 
-// const users = [
-//   { id: 1, name: "A", isActive: true },
-//   { id: 2, name: "B", isActive: false }
-// ];
+const users = [
+  { id: 1, name6: "A", isActive: true },
+  { id: 2, name7: "B", isActive2: false }
+];
 
 // Task:
+
 // 1. Extract name & isActive
+const [{ name6, isActive }, { name7, isActive2 }] = users;
+
+console.log(name6);
+console.log(isActive);
+console.log(name7);
+console.log(isActive2);
+
 // 2. Rename isActive to activeStatus
-// 3. Give default value if missing
+
+const users2 = [
+  { id: 1, name6: "A", isActive: true },
+  { id: 2, name7: "B", isActive: false }
+];
+
+const [
+  { isActive: activeStatus },
+  { isActive: activeStatus2 }
+] = users2;
+
+console.log(activeStatus);
+console.log(activeStatus2);
+
+// 3. Give default value if missing 
+const userme = [
+  { id: 1, nameme: "A", isActives: true },
+  { id: 2, nameme: "B", isActives: false }
+];
+
+const [
+  { nameme, isActives, ageme = 19 },
+  { nameme: nameme2, isActives: active2, ageme: age2 = 18 }
+] = userme;
+
+console.log(nameme, isActives, ageme);
+console.log(nameme2, active2, age2);
+
+
+
+
+
