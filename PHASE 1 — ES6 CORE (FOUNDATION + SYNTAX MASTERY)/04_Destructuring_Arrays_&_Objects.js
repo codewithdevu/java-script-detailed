@@ -141,3 +141,47 @@ const {
 
 console.log(name2);       // Divyansh
 console.log(firstSkill); // JS
+
+
+// 6. Destructuring in Function Parameters (Advanced but Common) 
+
+function printuser({name, age}) {
+  console.log(name, age);
+} 
+
+printuser({
+  name: "Hemant",
+  age: 19
+});
+
+// with default values
+
+function printuser ({name, age = 18}){
+  console.log(name,age);
+}
+ 
+printuser({ name: "rohit"})
+
+// 7. Why Destructuring is Important
+
+// Cleaner code
+
+// Less repetition (obj.property)
+
+// Mandatory in React (props, useState)
+
+// Makes API data handling easy
+
+// Improves readability & professionalism
+
+// Mastery Practice (Must Do)
+
+// const users = [
+//   { id: 1, name: "A", isActive: true },
+//   { id: 2, name: "B", isActive: false }
+// ];
+
+// Task:
+// 1. Extract name & isActive
+// 2. Rename isActive to activeStatus
+// 3. Give default value if missing
