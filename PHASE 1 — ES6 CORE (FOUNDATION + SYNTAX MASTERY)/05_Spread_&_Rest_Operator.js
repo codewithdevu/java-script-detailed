@@ -21,3 +21,23 @@ function getnames(name1,name2,name3){
 getnames(names[0],names[1],names[2]);
 getnames(...names);
 getnames(names)
+
+// object -> rest 
+
+let students = {
+    name: "devuu",
+    age: "19",
+    passion: ["coding" , "gym"]
+}
+
+// const age=students.age;
+const {...rest}=students;
+console.log(rest);
+
+//spread
+let newstudent = {
+    ...students,
+    age: "20"
+}
+console.log(newstudent);
+
