@@ -37,6 +37,20 @@ for (let i = 0; i <= 10; i++) {
         break
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 for (let i = 0; i <= 10; i++) {
     const element = [i];
     console.log(i);
@@ -96,3 +110,72 @@ for (const [key , value] of map) {
     console.log(`${key} :- ${value}`);
     
 }
+
+// for in 
+
+const myobject = {
+    js: "javascript",
+    py: "python",
+    rb: "ruby",
+    cpp: "c++"
+}
+
+for (const key in myobject) {
+    console.log(`${key} shortcut is for ${myobject[key]}`);
+}
+
+const programming = ["js", "py" , "c++" , "rb" , "html" , "css"]
+
+for (const key in programming) {
+    console.log(programming[key]);
+     
+}
+
+// map is not use for in loop beacuse map is itreated
+
+// for each loop 
+
+const coding = [ "pyhton" , "css" , "HTMl" , "java script" , "c++"]
+
+coding.forEach( function (name){ 
+    console.log(name);
+    
+})
+
+coding.forEach( (name) => { 
+    console.log(name);
+    
+})
+
+const printme = function (name) {
+    console.log(name);
+    
+}
+
+coding.forEach(printme)
+
+coding.forEach( (name , index , Array) => { 
+    console.log(name , index , Array);
+    
+})
+
+const mycodinglanguage = [
+    {
+        mylanguaugename: "html",
+        myfilename: "html-tutori0al"
+    },
+    {
+        mylanguaugename: "html",
+        myfilename: "html-tutori0al"
+    },
+    {
+        mylanguaugename: "html",
+        myfilename: "html-tutori0al"
+    }
+]
+
+mycodinglanguage.forEach( (item) => {
+    console.log(item.mylanguaugename);
+    
+})
+
