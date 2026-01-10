@@ -27,3 +27,37 @@ for (let i = 0; i < marvel.length; i++) {
     console.log(element);
 }
 
+// break and continue
+
+for (let i = 0; i <= 10; i++) {
+    const element = [i];
+    console.log(i);
+    if( i == 5){
+        console.log("detected");
+        break
+    }
+}
+for (let i = 0; i <= 10; i++) {
+    const element = [i];
+    console.log(i);
+    if( i == 5){
+        console.log("detected the number 5");
+        continue
+    }
+}
+
+// while and do while loop 
+
+// i = 0
+
+// while(i < 20){
+//     console.log(i);
+//     i++
+// }
+
+i = 0
+
+do{
+    console.log(i);
+    i++
+}while(i <= 20)
