@@ -61,3 +61,38 @@ do{
     console.log(i);
     i++
 }while(i <= 20)
+
+// for of 
+
+const arr = [1,2,3,4,5,6,7]
+
+for (const Array of arr) {
+    console.log(Array); 
+}
+
+const Array = ["divyansh" , "hemant" , "ranveer" , "dheeraj"]
+
+for (const num of Array) {
+    console.log(num);
+}
+
+const name = "divyansh yadav"
+
+for (const char of name) {
+    console.log(`each char is: ${char}`);
+    
+}
+
+const map = new Map()
+
+map.set("In" , "india")
+map.set("US" , "unitied state of america")
+map.set("fr" , "france")
+map.set("In" , "india")
+
+console.log(map);
+
+for (const [key , value] of map) {
+    console.log(`${key} :- ${value}`);
+    
+}
