@@ -11,14 +11,14 @@ const user = {
     }
 }
 
-// user.sendmessage()
+user.sendmessage()
 // user.username = "hemant"
 // user.sendmessage()
 // user.username = "dheeraj"
 // user.sendmessage()
 
 // global this
-// console.log(this); // {}
+console.log(this); // {}
 
 // function this 
 
