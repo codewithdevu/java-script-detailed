@@ -1,0 +1,44 @@
+* {
+    font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+
+}
+
+
+nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav a {
+    list-style: none;
+    text-decoration: none;
+    color: black;
+    background-color: #b8b8b8;
+    margin: 0px 10px;
+    padding: 10px 20px;
+    border-radius: 23px;
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+button{ 
+    padding: 10px 20px;
+    color: black;
+    background-color: whitesmoke;
+    border: none;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: 400;
+}
